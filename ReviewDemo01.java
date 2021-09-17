@@ -8,14 +8,16 @@ public class ReviewDemo01 {
 		// 소수: 1과 자기 자신외에는 나누어 떨어지지 않는 수
 		Scanner sc = new Scanner(System.in);
 		int number =  sc.nextInt();
-		int cnt = 0;
+//		int cnt = 0;
+		boolean isPrime = true;
 		
-		for(int k =1; k<=number; k++){
+		for(int k =2; k<=number; k++){
 			if(number % k ==0)
-				cnt ++;
+//				cnt ++;
+				isPrime = false;
 		}
 		
-		if(cnt== 2)
+		if(isPrime == true)
 			System.out.println(number +"은(는) 소수!");
 
 		else
